@@ -9,12 +9,18 @@ public class quest {
 		Formatacao f2 = new Formatacao();
 		String entrada1, entrada2;
 		
+		System.out.println("1- Implemente um programa que receba como entrada 2 strings(A e B)\n "
+				+ "representando permutações de 5 números em notação de ciclo \n"
+				+ "(ex: (153)(24)), e retorne o resultado da operação \n"
+				+ "de composição AB e BA, e indique se a mesma é comutativa ou não.\n\n");
+		
 //		System.out.println("Informe o primeiro grupo (ex: (2543)(1)): ");
 //		entrada1 = entrada.nextLine();
-		f1.separarString("(32)(154)");
+		f1.separarString("(3)(2154)");
+
 //		System.out.println("Informe o segundo grupo (ex: (21)(345)): ");
 //		entrada2 = entrada.nextLine();
-		f2.separarString("(154)(32)");
+		f2.separarString("(2154)(3)");
 		
 		System.out.println("Comutação de G1 e G2: \n[1, 2, 3, 4, 5]" + "\n" + f1.composicao(f2));
 		System.out.println("\nComutação de G2 e G1: \n[1, 2, 3, 4, 5]" + "\n" + f2.composicao(f1));

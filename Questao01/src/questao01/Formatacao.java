@@ -40,16 +40,8 @@ public class Formatacao {
 			}
 			
 		}
-		
-		for(String i: grupoS){
-			if(i.length() > 0){
-			}
-		}
 	}
 	
-	private void criarSubGrupos(){
-		
-	}
 	
 	public ArrayList<Integer> getLista(){
 		return lista;
@@ -72,7 +64,7 @@ public class Formatacao {
 							if (lista2.get(aux) == 1) {
 								return elemento;
 							}else if (lista2.get(aux) == 2) {
-								return lista.get(cont++);
+								return lista.get(aux2);
 							}else if(cont == 4){
 								return lista.get(aux2);
 							}else {
@@ -108,11 +100,8 @@ public class Formatacao {
 		int i, num, num2;
 		
 		for(i = 1; i < 6; i= i+1){
-			System.out.println("i = " + i);
 			num = l2.buscarElemento(i);
-			System.out.println("num = " + num);
 			num2 = buscarElemento(num);
-			System.out.println("num2 = " + num2);
 			listaNova.add(num2);
 		}
 		return listaNova;
