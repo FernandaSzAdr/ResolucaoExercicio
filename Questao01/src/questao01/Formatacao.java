@@ -21,7 +21,6 @@ public class Formatacao {
 		listaNova = new ArrayList<Integer>();
 	}
 	
-	//
 	public void separarString (String grupo){
 		grupoS = grupo.split("[\\W]");
 		String[] j = new String[4];
@@ -59,30 +58,45 @@ public class Formatacao {
 				pt1 = lista.get(cont);			
 				
 				if(pt1 == elemento){
+					//chegou no fim da fila
 					if(j+1 == lista2.get(aux)){
+						//não é o primeiro conjunto de numeros
 						if(aux2 > 0){
+							//o elemento está sozinho no mini conjunto, tipo (1) ou (5)
 							if (lista2.get(aux) == 1) {
+								//retorna esse mesmo elemento
 								return elemento;
+							//se o conjunto tiver dois elementos (23) 
 							}else if (lista2.get(aux) == 2) {
+								//retorna o primeiro elemento tipo em (23), ele retorna o 2
 								return lista.get(aux2);
-							}else if(cont == 4){
+							
+							}/*else if(cont == 4){
+			
 								return lista.get(aux2);
-							}else {
+							}*/else {
 								return lista.get(cont++);								
 							}
+						// é o primeiro conjunto de numeros
 						}else{
-							return lista.get(0);							
+							// retorna a primeira posição
+							return lista.get(0);		
+							// um else inutil 
 						}
 					}else{
+						// se o numero se apos o primeiro conjunto de numeros
 						if(aux2 > 0){
 							return lista.get(cont+1);
 						}else{
 							return lista.get(j+1);							
 						}
+						// cont e j vao possuir o mesmo valor, esse else é unutil 
 					}
 				}
+				// conta em que posição do vetor está
 				cont++;
 			}
+			// recebe a primeira posição daquele subgrupo
 			aux2 = cont;
 			aux++;
 		}while(true);
@@ -100,8 +114,11 @@ public class Formatacao {
 		int i, num, num2;
 		
 		for(i = 1; i < 6; i= i+1){
+			//System.out.println("\n\n i = " + i);
 			num = l2.buscarElemento(i);
+			//System.out.println("num = " + num);
 			num2 = buscarElemento(num);
+			//System.out.println("num2 = " + num2);
 			listaNova.add(num2);
 		}
 		return listaNova;
