@@ -67,6 +67,7 @@ public class Formatacao {
 		return lista2;
 	}
 	
+	// essa função recebe um elemento e informa qual o proximo elemento vem a seguir dele
 	public int buscarElemento(int elemento){
 		int aux = 0;
 		int aux2 = 0;
