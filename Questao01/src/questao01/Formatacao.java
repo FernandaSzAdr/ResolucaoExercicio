@@ -107,7 +107,7 @@ public class Formatacao {
 			
 								return lista.get(aux2);
 							}*/else {
-								return lista.get(cont++);								
+								return lista.get(aux2);								
 							}
 						// é o primeiro conjunto de numeros
 						}else{
@@ -150,11 +150,8 @@ public class Formatacao {
 		int i, num, num2;
 		
 		for(i = 1; i < 6; i= i+1){
-			//System.out.println("\n\n i = " + i);
 			num = l2.buscarElemento(i);
-			//System.out.println("num = " + num);
 			num2 = buscarElemento(num);
-			//System.out.println("num2 = " + num2);
 			listaNova.add(num2);
 		}
 		return listaNova;
